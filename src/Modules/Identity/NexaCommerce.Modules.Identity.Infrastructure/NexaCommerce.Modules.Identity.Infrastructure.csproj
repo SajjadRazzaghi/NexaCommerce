@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.Identity" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore"/>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer"/>
   </ItemGroup>
 
 </Project>
