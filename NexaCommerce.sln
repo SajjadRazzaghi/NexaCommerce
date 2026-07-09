@@ -44,16 +44,36 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9359451D-1453-45F2-B2D1-F424FF838878}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{223677A3-F259-4A6F-8B76-05CEA4B5D328}"
+	ProjectSection(SolutionItems) = preProject
+		User.cs = User.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ValueObjects", "ValueObjects", "{C98FB699-8C9E-4F61-BCEC-9FEA084E452E}"
+	ProjectSection(SolutionItems) = preProject
+		Email.cs = Email.cs
+		FullName.cs = FullName.cs
+		PasswordHash.cs = PasswordHash.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{00447650-9661-4798-AECC-C9C17F92BDE5}"
+	ProjectSection(SolutionItems) = preProject
+		UserRegisteredEvent.cs = UserRegisteredEvent.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{4DAE1D77-510A-4237-9BFC-6BC41CECC522}"
+	ProjectSection(SolutionItems) = preProject
+		IUserRepository.cs = IUserRepository.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enums", "Enums", "{3AECD537-9A8F-4205-BEF9-12B4E631A93F}"
+	ProjectSection(SolutionItems) = preProject
+		UserStatus.cs = UserStatus.cs
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Errors", "Errors", "{31D0BCAB-E0E3-486B-903F-FC4CF17CBA12}"
+	ProjectSection(SolutionItems) = preProject
+		UserErrors.cs = UserErrors.cs
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
