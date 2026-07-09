@@ -13,9 +13,9 @@ public static class DependencyInjection
         {
             cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
         });
-
+        services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
-
+        services.AddScoped<IPasswordHasher, PasswordHasher>();
         return services;
     }
 }
