@@ -1,4 +1,4 @@
-﻿namespace NexaCommerce.Modules.Identity.Application.Interfaces;
+﻿namespace NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
 
 public interface IPasswordHasher
 {
