@@ -10,11 +10,8 @@
     <Folder Include="Constants\" />
     <Folder Include="Enums\" />
     <Folder Include="Errors\" />
-    <Folder Include="Guards\" />
-    <Folder Include="Primitives\" />
     <Folder Include="ValueObjects\" />
     <Folder Include="Specifications\" />
-    <Folder Include="Results\" />
     <Folder Include="Pagination\" />
   </ItemGroup>
 

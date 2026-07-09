@@ -1,4 +1,4 @@
-﻿using NexaCommerce.SharedKernel.DomainEvents;
+﻿using NexaCommerce.SharedKernel.Events;
 using NexaCommerce.SharedKernel.Interfaces;
 
 namespace NexaCommerce.SharedKernel.Primitives;

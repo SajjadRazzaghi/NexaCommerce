@@ -1,4 +1,4 @@
-﻿namespace NexaCommerce.SharedKernel.DomainEvents;
+﻿namespace NexaCommerce.SharedKernel.Events;
 
 public interface IDomainEvent
 {
