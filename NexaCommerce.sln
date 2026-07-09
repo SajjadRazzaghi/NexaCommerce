@@ -41,9 +41,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Api", "Api", "{10240C3E-21A2-4E9A-B126-21B9E31A5191}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application", "{6299E7CD-601E-4127-BB80-23A021BA77C6}"
-	ProjectSection(SolutionItems) = preProject
-		DependencyInjection.cs = DependencyInjection.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9359451D-1453-45F2-B2D1-F424FF838878}"
 EndProject
@@ -148,6 +145,11 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A652D876-0B6A-44A0-9F9E-9CC12E440C8F}"
 	ProjectSection(SolutionItems) = preProject
 		DateTimeProvider.cs = DateTimeProvider.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A9E27125-D9AD-459D-A069-D53D3219DF69}"
+	ProjectSection(SolutionItems) = preProject
+		Architecture.md = Architecture.md
 	EndProjectSection
 EndProject
 Global

@@ -1,11 +1,11 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 using NexaCommerce.Modules.Identity.Domain.Entities;
 
 namespace NexaCommerce.Modules.Identity.Infrastructure.Persistence.Configurations;
 
-public sealed class UserConfiguration
-    : IEntityTypeConfiguration<User>
+public sealed class UserConfiguration : IEntityTypeConfiguration<User>
 {
     public void Configure(EntityTypeBuilder<User> builder)
     {
@@ -13,14 +13,11 @@ public sealed class UserConfiguration
 
         builder.HasKey(x => x.Id);
 
-        builder.Property(x => x.Id);
+        builder.Property(x => x.Email)
+            .HasMaxLength(200)
+            .IsRequired();
 
-        builder.OwnsOne(x => x.Email);
-
-        builder.OwnsOne(x => x.FullName);
-
-        builder.OwnsOne(x => x.PasswordHash);
-
-        builder.Property(x => x.Status);
+        builder.HasIndex(x => x.Email)
+            .IsUnique();
     }
 }

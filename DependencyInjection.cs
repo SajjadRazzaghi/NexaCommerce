@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +16,18 @@ public static class DependencyInjection
         services.AddSingleton<IDateTimeProvider, DateTimeProvider>();
         services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
         services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+        services.AddDbContext<IdentityDbContext>(options =>
+        {
+            options.UseSqlServer(configuration.GetConnectionString("Default"));
+        });
+
+        services.AddScoped<IUserRepository, UserRepository>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork<IdentityDbContext>>();
+
+
+
         return services;
     }
 }
