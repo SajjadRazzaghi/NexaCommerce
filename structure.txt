@@ -1,0 +1,179 @@
+Folder PATH listing for volume New Volume
+Volume serial number is B2B1-7FA5
+G:.
+³   .gitattributes
+³   .gitignore
+³   Directory.Build.props
+³   Directory.Packages.props
+³   new(General.Conflict
+³   new(General.NotFound
+³   new(General.Null
+³   new(General.Validation
+³   NexaCommerce.sln
+³   README.md
+³   structure.txt
+³   
+ÃÄÄÄdocker
+ÃÄÄÄdocs
+ÃÄÄÄNexaCommerce.Common
+³   ÀÄÄÄobj
+³           NexaCommerce.Common.csproj.nuget.dgspec.json
+³           NexaCommerce.Common.csproj.nuget.g.props
+³           NexaCommerce.Common.csproj.nuget.g.targets
+³           project.assets.json
+³           project.nuget.cache
+³           
+ÃÄÄÄNexaCommerce.Infrastructure
+³       NexaCommerce.Infrastructure.csproj
+³       
+ÃÄÄÄscripts
+ÃÄÄÄsrc
+³   ÀÄÄÄBuildingBlocks
+³       ÃÄÄÄNexaCommerce.Common
+³       ³   ³   NexaCommerce.Common.csproj
+³       ³   ³   
+³       ³   ÃÄÄÄbin
+³       ³   ³   ÀÄÄÄDebug
+³       ³   ³       ÀÄÄÄnet8.0
+³       ³   ³               NexaCommerce.Common.deps.json
+³       ³   ³               NexaCommerce.Common.dll
+³       ³   ³               NexaCommerce.Common.pdb
+³       ³   ³               NexaCommerce.SharedKernel.dll
+³       ³   ³               NexaCommerce.SharedKernel.pdb
+³       ³   ³               
+³       ³   ÃÄÄÄConstants
+³       ³   ÃÄÄÄExceptions
+³       ³   ÃÄÄÄExtensions
+³       ³   ³       StringExtensions.cs
+³       ³   ³       
+³       ³   ÃÄÄÄHelpers
+³       ³   ³       SystemClock.cs
+³       ³   ³       
+³       ³   ÃÄÄÄLocalization
+³       ³   ÃÄÄÄobj
+³       ³   ³   ³   NexaCommerce.Common.csproj.nuget.dgspec.json
+³       ³   ³   ³   NexaCommerce.Common.csproj.nuget.g.props
+³       ³   ³   ³   NexaCommerce.Common.csproj.nuget.g.targets
+³       ³   ³   ³   project.assets.json
+³       ³   ³   ³   project.nuget.cache
+³       ³   ³   ³   
+³       ³   ³   ÀÄÄÄDebug
+³       ³   ³       ÀÄÄÄnet8.0
+³       ³   ³           ³   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+³       ³   ³           ³   NexaCommerce.Common.AssemblyInfo.cs
+³       ³   ³           ³   NexaCommerce.Common.AssemblyInfoInputs.cache
+³       ³   ³           ³   NexaCommerce.Common.assets.cache
+³       ³   ³           ³   NexaCommerce.Common.csproj.CopyComplete
+³       ³   ³           ³   NexaCommerce.Common.csproj.CoreCompileInputs.cache
+³       ³   ³           ³   NexaCommerce.Common.csproj.FileListAbsolute.txt
+³       ³   ³           ³   NexaCommerce.Common.dll
+³       ³   ³           ³   NexaCommerce.Common.GeneratedMSBuildEditorConfig.editorconfig
+³       ³   ³           ³   NexaCommerce.Common.GlobalUsings.g.cs
+³       ³   ³           ³   NexaCommerce.Common.pdb
+³       ³   ³           ³   NexaCommerce.Common.sourcelink.json
+³       ³   ³           ³   
+³       ³   ³           ÃÄÄÄref
+³       ³   ³           ³       NexaCommerce.Common.dll
+³       ³   ³           ³       
+³       ³   ³           ÀÄÄÄrefint
+³       ³   ³                   NexaCommerce.Common.dll
+³       ³   ³                   
+³       ³   ÀÄÄÄValidation
+³       ÃÄÄÄNexaCommerce.Infrastructure
+³       ³   ³   NexaCommerce.Infrastructure.csproj
+³       ³   ³   
+³       ³   ÃÄÄÄbin
+³       ³   ³   ÀÄÄÄDebug
+³       ³   ³       ÀÄÄÄnet8.0
+³       ³   ÀÄÄÄobj
+³       ³       ³   NexaCommerce.Infrastructure.csproj.nuget.dgspec.json
+³       ³       ³   NexaCommerce.Infrastructure.csproj.nuget.g.props
+³       ³       ³   NexaCommerce.Infrastructure.csproj.nuget.g.targets
+³       ³       ³   project.assets.json
+³       ³       ³   project.nuget.cache
+³       ³       ³   
+³       ³       ÀÄÄÄDebug
+³       ³           ÀÄÄÄnet8.0
+³       ³               ³   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+³       ³               ³   NexaCommerce.Infrastructure.AssemblyInfo.cs
+³       ³               ³   NexaCommerce.Infrastructure.AssemblyInfoInputs.cache
+³       ³               ³   NexaCommerce.Infrastructure.assets.cache
+³       ³               ³   NexaCommerce.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+³       ³               ³   NexaCommerce.Infrastructure.GlobalUsings.g.cs
+³       ³               ³   
+³       ³               ÃÄÄÄref
+³       ³               ÀÄÄÄrefint
+³       ÀÄÄÄNexaCommerce.SharedKernel
+³           ³   GlobalUsings.cs
+³           ³   NexaCommerce.SharedKernel.csproj
+³           ³   
+³           ÃÄÄÄbin
+³           ³   ÀÄÄÄDebug
+³           ³       ÀÄÄÄnet8.0
+³           ³               NexaCommerce.SharedKernel.deps.json
+³           ³               NexaCommerce.SharedKernel.dll
+³           ³               NexaCommerce.SharedKernel.pdb
+³           ³               
+³           ÃÄÄÄConstants
+³           ÃÄÄÄEnums
+³           ÃÄÄÄErrors
+³           ÃÄÄÄEvents
+³           ³       DomainEvent.cs
+³           ³       IDomainEvent.cs
+³           ³       
+³           ÃÄÄÄGuards
+³           ³       Guard.cs
+³           ³       
+³           ÃÄÄÄInterfaces
+³           ³       IClock.cs
+³           ³       IEntity.cs
+³           ³       
+³           ÃÄÄÄobj
+³           ³   ³   NexaCommerce.SharedKernel.csproj.nuget.dgspec.json
+³           ³   ³   NexaCommerce.SharedKernel.csproj.nuget.g.props
+³           ³   ³   NexaCommerce.SharedKernel.csproj.nuget.g.targets
+³           ³   ³   project.assets.json
+³           ³   ³   project.nuget.cache
+³           ³   ³   
+³           ³   ÀÄÄÄDebug
+³           ³       ÀÄÄÄnet8.0
+³           ³           ³   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+³           ³           ³   NexaCommerce.SharedKernel.AssemblyInfo.cs
+³           ³           ³   NexaCommerce.SharedKernel.AssemblyInfoInputs.cache
+³           ³           ³   NexaCommerce.SharedKernel.assets.cache
+³           ³           ³   NexaCommerce.SharedKernel.csproj.CoreCompileInputs.cache
+³           ³           ³   NexaCommerce.SharedKernel.csproj.FileListAbsolute.txt
+³           ³           ³   NexaCommerce.SharedKernel.dll
+³           ³           ³   NexaCommerce.SharedKernel.GeneratedMSBuildEditorConfig.editorconfig
+³           ³           ³   NexaCommerce.SharedKernel.GlobalUsings.g.cs
+³           ³           ³   NexaCommerce.SharedKernel.pdb
+³           ³           ³   NexaCommerce.SharedKernel.sourcelink.json
+³           ³           ³   
+³           ³           ÃÄÄÄref
+³           ³           ³       NexaCommerce.SharedKernel.dll
+³           ³           ³       
+³           ³           ÀÄÄÄrefint
+³           ³                   NexaCommerce.SharedKernel.dll
+³           ³                   
+³           ÃÄÄÄPagination
+³           ³       PagedResult.cs
+³           ³       
+³           ÃÄÄÄPrimitives
+³           ³   ³   AggregateRoot.cs
+³           ³   ³   AuditableEntity.cs
+³           ³   ³   Entity.cs
+³           ³   ³   
+³           ³   ÀÄÄÄNewFolder
+³           ÃÄÄÄResults
+³           ³       Error.cs
+³           ³       Errors.cs
+³           ³       Result.cs
+³           ³       ResultOfT.cs
+³           ³       
+³           ÃÄÄÄSpecifications
+³           ³       ISpecification.cs
+³           ³       
+³           ÀÄÄÄValueObjects
+³                   ValueObject.cs
+³                   
+ÀÄÄÄtests

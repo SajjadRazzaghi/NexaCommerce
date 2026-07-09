@@ -13,9 +13,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{7EDD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0B1F4AC5-B5CB-4502-A05F-4FBDD2EA6750}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.SharedKernel", "src\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj", "{76C79816-23DB-4CB2-A9AC-27CABE841055}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8559B334-24E0-4B8F-A022-8BB970DEF3B2}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Common", "NexaCommerce.Common\NexaCommerce.Common.csproj", "{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Common", "src\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj", "{45998DB5-9636-4F0D-A950-45638F663DBC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Infrastructure", "src\BuildingBlocks\NexaCommerce.Infrastructure\NexaCommerce.Infrastructure.csproj", "{D7016E8D-682B-46AC-8B7A-4D1340EFD10B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.SharedKernel", "src\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj", "{8295B943-5F5D-48A3-B8CB-94281313E0FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,21 +31,26 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Release|Any CPU.Build.0 = Release|Any CPU
-		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45998DB5-9636-4F0D-A950-45638F663DBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45998DB5-9636-4F0D-A950-45638F663DBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45998DB5-9636-4F0D-A950-45638F663DBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45998DB5-9636-4F0D-A950-45638F663DBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D7016E8D-682B-46AC-8B7A-4D1340EFD10B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D7016E8D-682B-46AC-8B7A-4D1340EFD10B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D7016E8D-682B-46AC-8B7A-4D1340EFD10B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D7016E8D-682B-46AC-8B7A-4D1340EFD10B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8295B943-5F5D-48A3-B8CB-94281313E0FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8295B943-5F5D-48A3-B8CB-94281313E0FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8295B943-5F5D-48A3-B8CB-94281313E0FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8295B943-5F5D-48A3-B8CB-94281313E0FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{76C79816-23DB-4CB2-A9AC-27CABE841055} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
-		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
+		{45998DB5-9636-4F0D-A950-45638F663DBC} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
+		{D7016E8D-682B-46AC-8B7A-4D1340EFD10B} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
+		{8295B943-5F5D-48A3-B8CB-94281313E0FE} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}

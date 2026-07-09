@@ -7,14 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\src\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Exceptions\" />
     <Folder Include="Constants\" />
     <Folder Include="Localization\" />
     <Folder Include="Validation\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
   </ItemGroup>
 
 </Project>
