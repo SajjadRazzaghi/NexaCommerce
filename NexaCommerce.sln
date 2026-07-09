@@ -75,6 +75,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Errors", "Errors", "{31D0BC
 		UserErrors.cs = UserErrors.cs
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{FDC25D57-1BDB-4288-AE4F-7A46274842B3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegisterUser", "RegisterUser", "{2D043A69-5366-425F-A01F-DDBBE54D577E}"
+	ProjectSection(SolutionItems) = preProject
+		RegisterUserCommand.cs = RegisterUserCommand.cs
+		RegisterUserCommandHandler.cs = RegisterUserCommandHandler.cs
+		RegisterUserCommandValidator.cs = RegisterUserCommandValidator.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Login", "Login", "{83641AF1-1066-4E9A-8C6B-A66C866ADA0F}"
+	ProjectSection(SolutionItems) = preProject
+		LoginCommand.cs = LoginCommand.cs
+		LoginCommandHandler.cs = LoginCommandHandler.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTOs", "DTOs", "{9CC070FC-257C-47B5-B08F-164EB3B36B7D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Interfaces", "Interfaces", "{5367FD14-0BBF-4174-BA9B-AFF751B75DAE}"
+	ProjectSection(SolutionItems) = preProject
+		IJwtProvider.cs = IJwtProvider.cs
+		IPasswordHasher.cs = IPasswordHasher.cs
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mappings", "Mappings", "{372299B9-5EB3-4D9C-8042-F55E64CB4DA8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A2B2CDE4-622C-41A3-A8B4-C2BAC9C857F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstractions", "Abstractions", "{635F6786-2158-4079-8FE4-DCE4AB74EDB0}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -132,6 +161,14 @@ Global
 		{4DAE1D77-510A-4237-9BFC-6BC41CECC522} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
 		{3AECD537-9A8F-4205-BEF9-12B4E631A93F} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
 		{31D0BCAB-E0E3-486B-903F-FC4CF17CBA12} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
+		{FDC25D57-1BDB-4288-AE4F-7A46274842B3} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
+		{2D043A69-5366-425F-A01F-DDBBE54D577E} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
+		{83641AF1-1066-4E9A-8C6B-A66C866ADA0F} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
+		{9CC070FC-257C-47B5-B08F-164EB3B36B7D} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
+		{5367FD14-0BBF-4174-BA9B-AFF751B75DAE} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
+		{372299B9-5EB3-4D9C-8042-F55E64CB4DA8} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
+		{A2B2CDE4-622C-41A3-A8B4-C2BAC9C857F9} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
+		{635F6786-2158-4079-8FE4-DCE4AB74EDB0} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}

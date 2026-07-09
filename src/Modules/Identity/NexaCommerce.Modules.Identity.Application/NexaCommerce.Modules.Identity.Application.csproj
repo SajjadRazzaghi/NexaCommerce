@@ -11,4 +11,8 @@
     <ProjectReference Include="..\NexaCommerce.Modules.Identity.Domain\NexaCommerce.Modules.Identity.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" />
+  </ItemGroup>
+
 </Project>
