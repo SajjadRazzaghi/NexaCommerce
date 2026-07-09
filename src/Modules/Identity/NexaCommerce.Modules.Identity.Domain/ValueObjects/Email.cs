@@ -8,7 +8,10 @@ public sealed record Email
         new(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.Compiled);
 
     public string Value { get; }
-
+    private Email()
+    {
+        Value = null!;
+    }
     public Email(string value)
     {
         if (string.IsNullOrWhiteSpace(value))

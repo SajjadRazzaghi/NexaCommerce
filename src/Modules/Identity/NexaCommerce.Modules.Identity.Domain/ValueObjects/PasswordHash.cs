@@ -3,7 +3,10 @@
 public sealed record PasswordHash
 {
     public string Value { get; }
-
+    private PasswordHash()
+    {
+        Value = null!;
+    }
     public PasswordHash(string value)
     {
         if (string.IsNullOrWhiteSpace(value))

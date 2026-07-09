@@ -44,38 +44,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Application", "Application"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{9359451D-1453-45F2-B2D1-F424FF838878}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{223677A3-F259-4A6F-8B76-05CEA4B5D328}"
-	ProjectSection(SolutionItems) = preProject
-		User.cs = User.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ValueObjects", "ValueObjects", "{C98FB699-8C9E-4F61-BCEC-9FEA084E452E}"
-	ProjectSection(SolutionItems) = preProject
-		Email.cs = Email.cs
-		FullName.cs = FullName.cs
-		PasswordHash.cs = PasswordHash.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Events", "Events", "{00447650-9661-4798-AECC-C9C17F92BDE5}"
-	ProjectSection(SolutionItems) = preProject
-		UserRegisteredEvent.cs = UserRegisteredEvent.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{4DAE1D77-510A-4237-9BFC-6BC41CECC522}"
-	ProjectSection(SolutionItems) = preProject
-		IUserRepository.cs = IUserRepository.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Enums", "Enums", "{3AECD537-9A8F-4205-BEF9-12B4E631A93F}"
-	ProjectSection(SolutionItems) = preProject
-		UserStatus.cs = UserStatus.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Errors", "Errors", "{31D0BCAB-E0E3-486B-903F-FC4CF17CBA12}"
-	ProjectSection(SolutionItems) = preProject
-		UserErrors.cs = UserErrors.cs
-	EndProjectSection
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Commands", "Commands", "{FDC25D57-1BDB-4288-AE4F-7A46274842B3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RegisterUser", "RegisterUser", "{2D043A69-5366-425F-A01F-DDBBE54D577E}"
@@ -98,58 +66,18 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DTOs", "DTOs", "{9CC070FC-2
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Mappings", "Mappings", "{372299B9-5EB3-4D9C-8042-F55E64CB4DA8}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Abstractions", "Abstractions", "{635F6786-2158-4079-8FE4-DCE4AB74EDB0}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Authentication", "Authentication", "{A7DF64D7-3467-4578-AF46-426E34E5B8AA}"
-	ProjectSection(SolutionItems) = preProject
-		ICurrentUser.cs = ICurrentUser.cs
-		IJwtProvider.cs = IJwtProvider.cs
-		IPasswordHasher.cs = IPasswordHasher.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DateTime", "DateTime", "{77BDC7C8-DB0A-4B29-B6BC-08522452238E}"
-	ProjectSection(SolutionItems) = preProject
-		IDateTimeProvider.cs = IDateTimeProvider.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{5A6761F5-C294-476B-8696-B0B75C99F34C}"
-	ProjectSection(SolutionItems) = preProject
-		IdentityDbContext.cs = IdentityDbContext.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configurations", "Configurations", "{BB29249B-AD3A-4001-95E5-488DE58D4A1A}"
-	ProjectSection(SolutionItems) = preProject
-		UserConfiguration.cs = UserConfiguration.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repositories", "Repositories", "{A72C7012-72E1-45D6-AD63-EAEB5F989000}"
-	ProjectSection(SolutionItems) = preProject
-		UserRepository.cs = UserRepository.cs
-	EndProjectSection
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Api", "src\Api\NexaCommerce.Api\NexaCommerce.Api.csproj", "{ABEF17D8-D626-4ABC-89FE-123A22E42A1D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Persistence", "Persistence", "{BD79D0AE-15F0-4BE9-B7CF-2484A8FFBD95}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{C6882957-06CF-43CC-9939-5636B824AED5}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Queries", "Queries", "{80E832D3-BEFF-4663-9117-1227B2FBEDE8}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behaviors", "Behaviors", "{3193195D-E0A1-4499-8930-1AEB2CC17603}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Security", "Security", "{461AA4B7-3804-48EF-A120-5EEEA20563EE}"
-	ProjectSection(SolutionItems) = preProject
-		PasswordHasher.cs = PasswordHasher.cs
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{A652D876-0B6A-44A0-9F9E-9CC12E440C8F}"
-	ProjectSection(SolutionItems) = preProject
-		DateTimeProvider.cs = DateTimeProvider.cs
-	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{A9E27125-D9AD-459D-A069-D53D3219DF69}"
 	ProjectSection(SolutionItems) = preProject
 		Architecture.md = Architecture.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Date_Time", "Date_Time", "{77046262-2B26-44CF-80C5-0C2538308921}"
+	ProjectSection(SolutionItems) = preProject
+		src\Modules\Identity\NexaCommerce.Modules.Identity.Application\Abstractions\Date_Time\IDateTimeProvider.cs = src\Modules\Identity\NexaCommerce.Modules.Identity.Application\Abstractions\Date_Time\IDateTimeProvider.cs
 	EndProjectSection
 EndProject
 Global
@@ -207,30 +135,14 @@ Global
 		{10240C3E-21A2-4E9A-B126-21B9E31A5191} = {70283E3F-7625-4142-BC60-6C5AD8A85F8A}
 		{6299E7CD-601E-4127-BB80-23A021BA77C6} = {70283E3F-7625-4142-BC60-6C5AD8A85F8A}
 		{9359451D-1453-45F2-B2D1-F424FF838878} = {70283E3F-7625-4142-BC60-6C5AD8A85F8A}
-		{223677A3-F259-4A6F-8B76-05CEA4B5D328} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
-		{C98FB699-8C9E-4F61-BCEC-9FEA084E452E} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
-		{00447650-9661-4798-AECC-C9C17F92BDE5} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
-		{4DAE1D77-510A-4237-9BFC-6BC41CECC522} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
-		{3AECD537-9A8F-4205-BEF9-12B4E631A93F} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
-		{31D0BCAB-E0E3-486B-903F-FC4CF17CBA12} = {D29CB292-11D6-44C7-B168-C11466A6EE80}
 		{FDC25D57-1BDB-4288-AE4F-7A46274842B3} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
 		{2D043A69-5366-425F-A01F-DDBBE54D577E} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
 		{83641AF1-1066-4E9A-8C6B-A66C866ADA0F} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
 		{9CC070FC-257C-47B5-B08F-164EB3B36B7D} = {FDC25D57-1BDB-4288-AE4F-7A46274842B3}
 		{372299B9-5EB3-4D9C-8042-F55E64CB4DA8} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
-		{635F6786-2158-4079-8FE4-DCE4AB74EDB0} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
-		{A7DF64D7-3467-4578-AF46-426E34E5B8AA} = {635F6786-2158-4079-8FE4-DCE4AB74EDB0}
-		{77BDC7C8-DB0A-4B29-B6BC-08522452238E} = {635F6786-2158-4079-8FE4-DCE4AB74EDB0}
-		{5A6761F5-C294-476B-8696-B0B75C99F34C} = {9359451D-1453-45F2-B2D1-F424FF838878}
-		{BB29249B-AD3A-4001-95E5-488DE58D4A1A} = {5A6761F5-C294-476B-8696-B0B75C99F34C}
-		{A72C7012-72E1-45D6-AD63-EAEB5F989000} = {5A6761F5-C294-476B-8696-B0B75C99F34C}
 		{ABEF17D8-D626-4ABC-89FE-123A22E42A1D} = {CF0F183B-E4D2-4FFE-8C93-A9BFD4E4E194}
-		{BD79D0AE-15F0-4BE9-B7CF-2484A8FFBD95} = {635F6786-2158-4079-8FE4-DCE4AB74EDB0}
-		{C6882957-06CF-43CC-9939-5636B824AED5} = {635F6786-2158-4079-8FE4-DCE4AB74EDB0}
 		{80E832D3-BEFF-4663-9117-1227B2FBEDE8} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
-		{3193195D-E0A1-4499-8930-1AEB2CC17603} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
-		{461AA4B7-3804-48EF-A120-5EEEA20563EE} = {9359451D-1453-45F2-B2D1-F424FF838878}
-		{A652D876-0B6A-44A0-9F9E-9CC12E440C8F} = {9359451D-1453-45F2-B2D1-F424FF838878}
+		{77046262-2B26-44CF-80C5-0C2538308921} = {6299E7CD-601E-4127-BB80-23A021BA77C6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}

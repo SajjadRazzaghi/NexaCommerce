@@ -3,17 +3,22 @@ using NexaCommerce.Modules.Identity.Domain.ValueObjects;
 
 namespace NexaCommerce.Modules.Identity.Domain.Entities;
 
+
+
 public sealed class User
 {
     public Guid Id { get; private set; }
 
-    public Email Email { get; private set; }
+    public Email Email { get; private set; } = null!;
 
-    public FullName FullName { get; private set; }
+    public FullName FullName { get; private set; } = null!;
 
-    public PasswordHash PasswordHash { get; private set; }
+    public PasswordHash PasswordHash { get; private set; } = null!;
 
-    public UserStatus Status { get; private set; }
+    public UserStatus Status
+    {
+        get; private set;
+    }
 
     private User()
     {
