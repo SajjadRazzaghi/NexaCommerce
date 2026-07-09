@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{7EDD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{0B1F4AC5-B5CB-4502-A05F-4FBDD2EA6750}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.SharedKernel", "src\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj", "{76C79816-23DB-4CB2-A9AC-27CABE841055}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.SharedKernel", "src\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj", "{76C79816-23DB-4CB2-A9AC-27CABE841055}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Common", "NexaCommerce.Common\NexaCommerce.Common.csproj", "{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,12 +27,17 @@ Global
 		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76C79816-23DB-4CB2-A9AC-27CABE841055}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{76C79816-23DB-4CB2-A9AC-27CABE841055} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
+		{ED944AAC-F61A-4141-82E3-B13A2DA4AE0D} = {C8FAA68A-6391-4C56-A0AA-C9122237CE56}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}
