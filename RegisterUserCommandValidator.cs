@@ -1,8 +1,26 @@
-﻿using System;
+﻿using FluentValidation;
 
-public class Class1
+namespace NexaCommerce.Modules.Identity.Application.Commands.RegisterUser;
+
+public sealed class RegisterUserCommandValidator
+    : AbstractValidator<RegisterUserCommand>
 {
-	public Class1()
-	{
-	}
+    public RegisterUserCommandValidator()
+    {
+        RuleFor(x => x.FirstName)
+            .NotEmpty()
+            .MaximumLength(50);
+
+        RuleFor(x => x.LastName)
+            .NotEmpty()
+            .MaximumLength(50);
+
+        RuleFor(x => x.Email)
+            .NotEmpty()
+            .EmailAddress();
+
+        RuleFor(x => x.Password)
+            .NotEmpty()
+            .MinimumLength(8);
+    }
 }

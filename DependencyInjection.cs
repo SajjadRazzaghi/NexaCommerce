@@ -1,15 +1,20 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using NexaCommerce.Modules.Identity.Domain.Repositories;
-using NexaCommerce.Modules.Identity.Infrastructure.Persistence.Repositories;
+﻿using FluentValidation;
+using MediatR;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace NexaCommerce.Modules.Identity.Infrastructure;
+namespace NexaCommerce.Modules.Identity.Application;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddIdentityInfrastructure(
+    public static IServiceCollection AddIdentityApplication(
         this IServiceCollection services)
     {
-        services.AddScoped<IUserRepository, UserRepository>();
+        services.AddMediatR(cfg =>
+        {
+            cfg.RegisterServicesFromAssembly(typeof(DependencyInjection).Assembly);
+        });
+
+        services.AddValidatorsFromAssembly(typeof(DependencyInjection).Assembly);
 
         return services;
     }
