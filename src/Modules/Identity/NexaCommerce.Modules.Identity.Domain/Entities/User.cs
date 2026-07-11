@@ -1,4 +1,4 @@
-﻿using NexaCommerce.Modules.Identity.Domain.Enums;
+using NexaCommerce.Modules.Identity.Domain.Enums;
 using NexaCommerce.Modules.Identity.Domain.ValueObjects;
 
 namespace NexaCommerce.Modules.Identity.Domain.Entities;
@@ -14,7 +14,9 @@ public sealed class User
     public FullName FullName { get; private set; } = null!;
 
     public PasswordHash PasswordHash { get; private set; } = null!;
+    public DateTime CreatedOnUtc { get; private set; }
 
+    public DateTime? ModifiedOnUtc { get; private set; }
     public UserStatus Status
     {
         get; private set;
