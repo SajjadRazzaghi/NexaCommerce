@@ -1,4 +1,4 @@
-﻿using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 
 namespace NexaCommerce.Modules.Identity.Domain.ValueObjects;
 
@@ -8,26 +8,29 @@ public sealed record Email
         new(@"^[^@\s]+@[^@\s]+\.[^@\s]+$", RegexOptions.Compiled);
 
     public string Value { get; }
+
     private Email()
     {
         Value = null!;
     }
-    public Email(string value)
+
+    private Email(string value)
+    {
+        Value = value;
+    }
+
+    public static Email Create(string value)
     {
         if (string.IsNullOrWhiteSpace(value))
-            throw new ArgumentException("Email is required.", nameof(value));
+            throw new ArgumentException("Email is required.");
 
         value = value.Trim().ToLowerInvariant();
 
         if (!EmailRegex.IsMatch(value))
-            throw new ArgumentException("Invalid email format.", nameof(value));
+            throw new ArgumentException("Invalid email.");
 
-        Value = value;
+        return new Email(value);
     }
 
     public override string ToString() => Value;
-
-    public static implicit operator string(Email email) => email.Value;
-
-    public static explicit operator Email(string value) => new(value);
 }
