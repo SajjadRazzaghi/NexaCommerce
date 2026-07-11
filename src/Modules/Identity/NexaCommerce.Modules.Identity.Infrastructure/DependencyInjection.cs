@@ -1,12 +1,15 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using NexaCommerce.Modules.Identity.Application.Abstractions.Security;
-using NexaCommerce.Modules.Identity.Infrastructure.Security;
+
+using NexaCommerce.Infrastructure.Persistence;
+
+using NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
 using NexaCommerce.Modules.Identity.Domain.Repositories;
 using NexaCommerce.Modules.Identity.Infrastructure.Persistence;
 using NexaCommerce.Modules.Identity.Infrastructure.Persistence.Repositories;
-
+using NexaCommerce.Modules.Identity.Infrastructure.Security;
+using NexaCommerce.SharedKernel.Abstractions;
 namespace NexaCommerce.Modules.Identity.Infrastructure;
 
 public static class DependencyInjection
@@ -22,7 +25,11 @@ public static class DependencyInjection
         });
 
         services.AddScoped<IUserRepository, UserRepository>();
+
         services.AddScoped<IPasswordHasher, PasswordHasher>();
+
+        services.AddScoped<IUnitOfWork, UnitOfWork<IdentityDbContext>>();
+        services.AddScoped<IJwtProvider, JwtProvider>();
         return services;
     }
 }

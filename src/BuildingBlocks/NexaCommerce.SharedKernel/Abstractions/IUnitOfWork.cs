@@ -1,3 +1,5 @@
+namespace NexaCommerce.SharedKernel.Abstractions;
+
 public interface IUnitOfWork
 {
     Task<int> SaveChangesAsync(

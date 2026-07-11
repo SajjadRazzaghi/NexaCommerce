@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 
+using NexaCommerce.SharedKernel.Abstractions;
+
 namespace NexaCommerce.Infrastructure.Persistence;
 
 public sealed class UnitOfWork<TContext> : IUnitOfWork

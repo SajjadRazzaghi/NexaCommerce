@@ -29,7 +29,9 @@ internal sealed class UserRepository : IUserRepository
         CancellationToken cancellationToken = default)
     {
         return await _context.Users
-            .FirstOrDefaultAsync(x => x.Email == email, cancellationToken);
+      .FirstOrDefaultAsync(
+          x => x.Email.Value == email.Value,
+          cancellationToken);
     }
 
     public async Task AddAsync(

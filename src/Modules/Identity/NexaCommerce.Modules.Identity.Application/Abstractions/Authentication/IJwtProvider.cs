@@ -1,6 +1,8 @@
-﻿namespace NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
+using NexaCommerce.Modules.Identity.Domain.Entities;
+
+namespace NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
 
 public interface IJwtProvider
 {
-    string GenerateToken(Guid userId, string email);
+    string Generate(User user);
 }

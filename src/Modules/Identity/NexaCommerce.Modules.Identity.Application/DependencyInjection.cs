@@ -2,7 +2,7 @@ using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
-using NexaCommerce.Modules.Identity.Application.Abstractions.Security;
+using NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
 namespace NexaCommerce.Modules.Identity.Application;
 
 public static class DependencyInjection

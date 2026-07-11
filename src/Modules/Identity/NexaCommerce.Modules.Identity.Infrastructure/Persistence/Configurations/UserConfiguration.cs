@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 using NexaCommerce.Modules.Identity.Domain.Entities;
 
 namespace NexaCommerce.Modules.Identity.Infrastructure.Persistence.Configurations;
@@ -15,35 +16,45 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Id)
             .ValueGeneratedNever();
 
-        builder.OwnsOne(x => x.Email, email =>
-        {
-            email.Property(x => x.Value)
-                .HasColumnName("Email")
-                .HasMaxLength(256)
-                .IsRequired();
 
-            email.HasIndex(x => x.Value).IsUnique();
-        });
+        builder.OwnsOne(
+            x => x.Email,
+            email =>
+            {
+                email.Property(x => x.Value)
+                    .HasColumnName("Email")
+                    .HasMaxLength(256)
+                    .IsRequired();
 
-        builder.OwnsOne(x => x.FullName, fullName =>
-        {
-            fullName.Property(x => x.FirstName)
-                .HasColumnName("FirstName")
-                .HasMaxLength(100)
-                .IsRequired();
+                email.HasIndex(x => x.Value)
+                    .IsUnique();
+            });
 
-            fullName.Property(x => x.LastName)
-                .HasColumnName("LastName")
-                .HasMaxLength(100)
-                .IsRequired();
-        });
 
-        builder.OwnsOne(x => x.PasswordHash, password =>
-        {
-            password.Property(x => x.Value)
-                .HasColumnName("PasswordHash")
-                .HasMaxLength(500)
-                .IsRequired();
-        });
+        builder.OwnsOne(
+            x => x.FullName,
+            fullName =>
+            {
+                fullName.Property(x => x.FirstName)
+                    .HasColumnName("FirstName")
+                    .HasMaxLength(100)
+                    .IsRequired();
+
+                fullName.Property(x => x.LastName)
+                    .HasColumnName("LastName")
+                    .HasMaxLength(100)
+                    .IsRequired();
+            });
+
+
+        builder.OwnsOne(
+            x => x.PasswordHash,
+            password =>
+            {
+                password.Property(x => x.Value)
+                    .HasColumnName("PasswordHash")
+                    .HasMaxLength(500)
+                    .IsRequired();
+            });
     }
 }

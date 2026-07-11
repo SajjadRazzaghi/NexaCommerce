@@ -1,6 +1,7 @@
 using MediatR;
 
-using NexaCommerce.Modules.Identity.Application.Abstractions.Security;
+using NexaCommerce.SharedKernel.Abstractions;
+using NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
 using NexaCommerce.Modules.Identity.Domain.Entities;
 using NexaCommerce.Modules.Identity.Domain.Repositories;
 using NexaCommerce.Modules.Identity.Domain.ValueObjects;
@@ -13,52 +14,45 @@ internal sealed class RegisterUserCommandHandler
 {
     private readonly IUserRepository _users;
     private readonly IPasswordHasher _passwordHasher;
-    //  private readonly IUnitOfWork _unitOfWork;
+    private readonly IUnitOfWork _unitOfWork;
 
-    //public RegisterUserCommandHandler(
-    //    IUserRepository users,
-    //    IPasswordHasher passwordHasher,
-    //    IUnitOfWork unitOfWork)
-    //{
-    //    _users = users;
-    //    _passwordHasher = passwordHasher;
-    //    _unitOfWork = unitOfWork;
-    //}
+    public RegisterUserCommandHandler(
+        IUserRepository users,
+        IPasswordHasher passwordHasher,
+        IUnitOfWork unitOfWork)
+    {
+        _users = users;
+        _passwordHasher = passwordHasher;
+        _unitOfWork = unitOfWork;
+    }
 
     public async Task<Result<RegisterUserResponse>> Handle(
-    RegisterUserCommand request,
-    CancellationToken cancellationToken)
+        RegisterUserCommand request,
+        CancellationToken cancellationToken)
     {
-        var email = Email.Create(request.Email);
+        var existing =
+            await _users.GetByEmailAsync(
+                Email.Create(request.Email),
+                cancellationToken);
 
-        var exists = await _users.GetByEmailAsync(
-            email,
-            cancellationToken);
-
-        if (exists is not null)
+        if (existing is not null)
         {
             return Result<RegisterUserResponse>.Failure(
                 new Error(
                     "Identity.EmailExists",
-                    "Email already exists"));
+                    "Email already exists."));
         }
 
-        var fullName = FullName.Create(
-            request.FirstName,
-            request.LastName);
-
-        var passwordHash = PasswordHash.Create(
-     _passwordHasher.Hash(request.Password));
-
         var user = User.Create(
-            email,
-            fullName,
-            passwordHash);
+            Email.Create(request.Email),
+            FullName.Create(request.FirstName, request.LastName),
+            new PasswordHash(
+                _passwordHasher.Hash(request.Password)));
 
         await _users.AddAsync(user, cancellationToken);
 
-        // بعداً UnitOfWork را اضافه می‌کنیم
-        // await _unitOfWork.SaveChangesAsync(cancellationToken);
+        // ذخیره در دیتابیس
+        await _unitOfWork.SaveChangesAsync(cancellationToken);
 
         return Result<RegisterUserResponse>.Success(
             new RegisterUserResponse(user.Id));

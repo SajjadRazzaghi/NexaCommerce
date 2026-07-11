@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
     <ProjectReference Include="..\NexaCommerce.Modules.Identity.Domain\NexaCommerce.Modules.Identity.Domain.csproj" />
   </ItemGroup>
 
