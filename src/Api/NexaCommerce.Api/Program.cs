@@ -14,6 +14,7 @@ builder.Services.Configure<JwtSettings>(
     builder.Configuration.GetSection(JwtSettings.SectionName));
 var app = builder.Build();
 
+app.MapLoginEndpoint();
 app.UseSwagger();
 app.UseSwaggerUI();
 
