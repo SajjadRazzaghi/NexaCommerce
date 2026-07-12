@@ -9,7 +9,7 @@ public sealed class User
 {
     public Guid Id { get; private set; }
 
-    public Email Email { get; private set; } = null!;
+    public PhoneNumber PhoneNumber { get; private set; } = null!;
 
     public FullName FullName { get; private set; } = null!;
 
@@ -28,24 +28,24 @@ public sealed class User
 
     private User(
      Guid id,
-     Email email,
+     PhoneNumber phoneNumber,
      FullName fullName,
      PasswordHash passwordHash)
     {
         Id = id;
-        Email = email;
+        PhoneNumber = phoneNumber; 
         FullName = fullName;
         PasswordHash = passwordHash;
         Status = UserStatus.Active;
     }
     public static User Create(
-    Email email,
+    PhoneNumber phoneNumber,
     FullName fullName,
     PasswordHash passwordHash)
     {
         return new User(
             Guid.NewGuid(),
-            email,
+            phoneNumber,
             fullName,
             passwordHash);
     }

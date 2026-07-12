@@ -31,20 +31,20 @@ internal sealed class RegisterUserCommandHandler
         CancellationToken cancellationToken)
     {
         var existing =
-            await _users.GetByEmailAsync(
-                Email.Create(request.Email),
-                cancellationToken);
+     await _users.GetByPhoneNumberAsync(
+         PhoneNumber.Create(request.PhoneNumber),
+         cancellationToken);
 
         if (existing is not null)
         {
             return Result<RegisterUserResponse>.Failure(
                 new Error(
-                    "Identity.EmailExists",
-                    "Email already exists."));
+                    "Identity.PhoneExists",
+                    "Phone already exists."));
         }
 
         var user = User.Create(
-            Email.Create(request.Email),
+           PhoneNumber.Create(request.PhoneNumber),
             FullName.Create(request.FirstName, request.LastName),
             new PasswordHash(
                 _passwordHasher.Hash(request.Password)));

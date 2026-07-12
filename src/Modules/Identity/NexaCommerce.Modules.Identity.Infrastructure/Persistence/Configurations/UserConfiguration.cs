@@ -16,17 +16,16 @@ internal sealed class UserConfiguration : IEntityTypeConfiguration<User>
         builder.Property(x => x.Id)
             .ValueGeneratedNever();
 
-
         builder.OwnsOne(
-            x => x.Email,
-            email =>
+            x => x.PhoneNumber,
+            phone =>
             {
-                email.Property(x => x.Value)
-                    .HasColumnName("Email")
-                    .HasMaxLength(256)
+                phone.Property(x => x.Value)
+                    .HasColumnName("PhoneNumber")
+                    .HasMaxLength(11)
                     .IsRequired();
 
-                email.HasIndex(x => x.Value)
+                phone.HasIndex(x => x.Value)
                     .IsUnique();
             });
 

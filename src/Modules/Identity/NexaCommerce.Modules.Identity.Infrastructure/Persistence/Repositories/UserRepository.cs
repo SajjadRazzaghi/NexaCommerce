@@ -24,14 +24,14 @@ internal sealed class UserRepository : IUserRepository
             .FirstOrDefaultAsync(x => x.Id == id, cancellationToken);
     }
 
-    public async Task<User?> GetByEmailAsync(
-        Email email,
-        CancellationToken cancellationToken = default)
+    public async Task<User?> GetByPhoneNumberAsync(
+    PhoneNumber phoneNumber,
+    CancellationToken cancellationToken = default)
     {
         return await _context.Users
-      .FirstOrDefaultAsync(
-          x => x.Email.Value == email.Value,
-          cancellationToken);
+            .FirstOrDefaultAsync(
+                x => x.PhoneNumber.Value == phoneNumber.Value,
+                cancellationToken);
     }
 
     public async Task AddAsync(
