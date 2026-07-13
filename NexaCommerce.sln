@@ -59,6 +59,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Modules.Catalo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Modules.Catalog.Api", "src\Modules\Catalog\NexaCommerce.Modules.Catalog.Api\NexaCommerce.Modules.Catalog.Api.csproj", "{FC352372-8FF6-430B-B180-EF40D4F77DAC}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Inventory", "Inventory", "{B1C1D197-A1C6-4B01-B0B6-0C7D77B71F81}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,7 @@ Global
 		{AFEB1D5E-DC7E-4B96-B6AA-256662CE1568} = {7F0A12B9-06C5-43D0-B006-08DCAE2FA0F9}
 		{6DB36827-742F-4F6E-A127-3A4FE35E54F1} = {7F0A12B9-06C5-43D0-B006-08DCAE2FA0F9}
 		{FC352372-8FF6-430B-B180-EF40D4F77DAC} = {7F0A12B9-06C5-43D0-B006-08DCAE2FA0F9}
+		{B1C1D197-A1C6-4B01-B0B6-0C7D77B71F81} = {27E68F57-5420-49C6-9709-CC48044BCFE4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}

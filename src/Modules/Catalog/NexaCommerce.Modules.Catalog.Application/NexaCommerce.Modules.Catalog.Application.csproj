@@ -9,11 +9,11 @@
   <ItemGroup>
 
 
-      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj"/>
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj" />
 
-      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj"/>
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
 
-      <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj"/>
+      <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj" />
       
   </ItemGroup>
     <ItemGroup>
@@ -22,5 +22,8 @@
         <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
         <PackageReference Include="Microsoft.AspNetCore.Mvc" />
 
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Features\ProductSpecifications\" />
     </ItemGroup>
 </Project>
