@@ -17,6 +17,15 @@ public sealed class User
     public DateTime CreatedOnUtc { get; private set; }
 
     public DateTime? ModifiedOnUtc { get; private set; }
+    public string? RefreshToken { get; private set; }
+
+    public DateTime? RefreshTokenExpiresOnUtc { get; private set; }
+
+    public string? PasswordResetCode { get; private set; }
+
+    public DateTime? PasswordResetCodeExpiresOnUtc { get; private set; }
+    
+
     public UserStatus Status
     {
         get; private set;
@@ -49,4 +58,42 @@ public sealed class User
             fullName,
             passwordHash);
     }
+    public void SetRefreshToken(
+    string refreshToken,
+    DateTime expiresOnUtc)
+    {
+        RefreshToken = refreshToken;
+        RefreshTokenExpiresOnUtc = expiresOnUtc;
+    }
+    public void SetPasswordResetCode(
+    string code,
+    DateTime expiresOnUtc)
+    {
+        PasswordResetCode = code;
+        PasswordResetCodeExpiresOnUtc = expiresOnUtc;
+    }
+
+    public void ClearPasswordResetCode()
+    {
+        PasswordResetCode = null;
+        PasswordResetCodeExpiresOnUtc = null;
+    }
+    public bool IsPasswordResetCodeValid(
+    string code)
+    {
+        return PasswordResetCode == code &&
+               PasswordResetCodeExpiresOnUtc >= DateTime.UtcNow;
+    }
+
+    public void ChangePassword(
+    PasswordHash passwordHash)
+    {
+        PasswordHash = passwordHash;
+
+        PasswordResetCode = null;
+
+        PasswordResetCodeExpiresOnUtc = null;
+    }
+
+   
 }

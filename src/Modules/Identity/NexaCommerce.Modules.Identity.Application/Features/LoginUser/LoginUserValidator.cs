@@ -7,11 +7,24 @@ public sealed class LoginUserValidator
 {
     public LoginUserValidator()
     {
-        RuleFor(x => x.Email)
+        // اعتبارسنجی برای PhoneNumber
+        RuleFor(x => x.PhoneNumber)
             .NotEmpty()
-            .EmailAddress();
+            .WithMessage("Phone number is required")
+            .MinimumLength(10)
+            .WithMessage("Phone number must be at least 10 digits")
+            .MaximumLength(15)
+            .WithMessage("Phone number must not exceed 15 digits")
+            .Matches(@"^[0-9]+$")
+            .WithMessage("Phone number must contain only digits");
 
+        // اعتبارسنجی پسورد
         RuleFor(x => x.Password)
-            .NotEmpty();
+            .NotEmpty()
+            .WithMessage("Password is required")
+            .MinimumLength(8)
+            .WithMessage("Password must be at least 8 characters")
+            .MaximumLength(100)
+            .WithMessage("Password must not exceed 100 characters");
     }
 }

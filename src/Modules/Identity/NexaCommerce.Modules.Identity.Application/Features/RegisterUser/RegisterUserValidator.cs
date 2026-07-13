@@ -2,13 +2,15 @@ using FluentValidation;
 
 namespace NexaCommerce.Modules.Identity.Application.Features.RegisterUser;
 
-public sealed class RegisterUserValidator : AbstractValidator<RegisterUserCommand>
+public sealed class RegisterUserValidator
+    : AbstractValidator<RegisterUserCommand>
 {
     public RegisterUserValidator()
     {
-        RuleFor(x => x.Email)
+        RuleFor(x => x.PhoneNumber)
             .NotEmpty()
-            .EmailAddress();
+            .Matches(@"^09\d{9}$")
+            .WithMessage("Phone number is invalid.");
 
         RuleFor(x => x.FirstName)
             .NotEmpty()
@@ -21,5 +23,9 @@ public sealed class RegisterUserValidator : AbstractValidator<RegisterUserComman
         RuleFor(x => x.Password)
             .NotEmpty()
             .MinimumLength(8);
+
+        //RuleFor(x => x.Email)
+        //    .EmailAddress()
+        //    .When(x => !string.IsNullOrWhiteSpace(x.Email));
     }
 }

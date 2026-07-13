@@ -15,9 +15,12 @@ builder.Services.Configure<JwtSettings>(
 var app = builder.Build();
 
 app.MapLoginEndpoint();
+app.MapRegisterEndpoint();
+app.MapRefreshTokenEndpoint();
+app.MapForgotPasswordEndpoint();
+app.MapResetPasswordEndpoint();
 app.UseSwagger();
 app.UseSwaggerUI();
 
-app.MapRegisterEndpoint();
 
 app.Run();

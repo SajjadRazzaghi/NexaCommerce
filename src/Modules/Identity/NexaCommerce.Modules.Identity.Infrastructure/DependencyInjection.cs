@@ -5,10 +5,12 @@ using Microsoft.Extensions.DependencyInjection;
 using NexaCommerce.Infrastructure.Persistence;
 
 using NexaCommerce.Modules.Identity.Application.Abstractions.Authentication;
+using NexaCommerce.Modules.Identity.Application.Abstractions.Sms;
 using NexaCommerce.Modules.Identity.Domain.Repositories;
 using NexaCommerce.Modules.Identity.Infrastructure.Persistence;
 using NexaCommerce.Modules.Identity.Infrastructure.Persistence.Repositories;
 using NexaCommerce.Modules.Identity.Infrastructure.Security;
+using NexaCommerce.Modules.Identity.Infrastructure.Sms;
 using NexaCommerce.SharedKernel.Abstractions;
 namespace NexaCommerce.Modules.Identity.Infrastructure;
 
@@ -30,6 +32,7 @@ public static class DependencyInjection
 
         services.AddScoped<IUnitOfWork, UnitOfWork<IdentityDbContext>>();
         services.AddScoped<IJwtProvider, JwtProvider>();
+        services.AddScoped<ISmsService, FakeSmsService>();
         return services;
     }
 }

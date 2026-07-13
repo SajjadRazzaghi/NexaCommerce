@@ -1,0 +1,26 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+
+
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj"/>
+
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj"/>
+
+      <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj"/>
+      
+  </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="FluentValidation" />
+        <PackageReference Include="MediatR" />
+        <PackageReference Include="FluentValidation.DependencyInjectionExtensions" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" />
+
+    </ItemGroup>
+</Project>

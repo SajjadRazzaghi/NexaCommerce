@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Infrastructure\NexaCommerce.Infrastructure.csproj" />
+    <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj" />
+ 
+
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
+
+      <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj" />
+
+      <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Application\NexaCommerce.Modules.Catalog.Application.csproj" />
+  </ItemGroup>
+
+</Project>

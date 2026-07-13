@@ -1,9 +1,10 @@
 using MediatR;
 
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Routing;
-using Microsoft.AspNetCore.Builder; // For MapPost, MapGet, etc.
-using Microsoft.AspNetCore.Http; // For HttpContext, IResult, etc.
+
 using NexaCommerce.Modules.Identity.Application.Features.LoginUser;
 
 namespace NexaCommerce.Api.Endpoints.Identity;
@@ -20,19 +21,14 @@ public static class LoginEndpoint
                 ISender sender,
                 CancellationToken cancellationToken) =>
             {
-                var result = await sender.Send(
-                    command,
-                    cancellationToken);
+                var result =
+                    await sender.Send(command, cancellationToken);
 
                 if (result.IsFailure)
-                {
-                    return Results.Unauthorized();
-                }
+                    return Results.BadRequest(result.Error);
 
                 return Results.Ok(result.Value);
-            })
-        .WithName("Login")
-        .WithTags("Identity");
+            });
 
         return app;
     }

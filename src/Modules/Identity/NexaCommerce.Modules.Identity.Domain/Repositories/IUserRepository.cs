@@ -9,11 +9,21 @@ public interface IUserRepository
         Guid id,
         CancellationToken cancellationToken = default);
 
-    Task<User?> GetByPhoneNumberAsync(
-    PhoneNumber phoneNumber,
-    CancellationToken cancellationToken = default);
+   
+
 
     Task AddAsync(
         User user,
         CancellationToken cancellationToken = default);
+    
+    Task<User?> GetByResetCodeAsync(
+    string code,
+    CancellationToken cancellationToken = default);
+    Task<User?> GetByPhoneNumberAsync(
+    PhoneNumber phoneNumber,
+    CancellationToken cancellationToken = default);
+    Task<User?> GetByRefreshTokenAsync(
+    string refreshToken,
+    CancellationToken cancellationToken = default);
+
 }

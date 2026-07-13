@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+using FluentValidation;
 
 namespace NexaCommerce.Modules.Identity.Application.Commands.RegisterUser;
 
@@ -15,9 +15,10 @@ public sealed class RegisterUserCommandValidator
             .NotEmpty()
             .MaximumLength(50);
 
-        RuleFor(x => x.Email)
+        RuleFor(x => x.PhoneNumber)
             .NotEmpty()
-            .EmailAddress();
+            .Matches(@"^09\d{9}$")
+            .WithMessage("شماره موبایل معتبر نیست.");
 
         RuleFor(x => x.Password)
             .NotEmpty()
