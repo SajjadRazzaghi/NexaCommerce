@@ -22,8 +22,11 @@ public sealed class Product
 
     public DateTime CreatedOnUtc { get; private set; }
 
+   
+
     public IReadOnlyCollection<ProductVariant> Variants
         => _variants;
+
 
     public IReadOnlyCollection<ProductImage> Images
         => _images;

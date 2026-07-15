@@ -26,8 +26,7 @@ public sealed class CatalogDbContext : DbContext
     public DbSet<ProductAttribute> ProductAttributes
     => Set<ProductAttribute>();
 
-    public DbSet<VariantAttributeValue> VariantAttributeValues
-        => Set<VariantAttributeValue>();
+  
     public DbSet<CategoryAttribute> CategoryAttributes
     => Set<CategoryAttribute>();
     public DbSet<ProductAttributeOption>

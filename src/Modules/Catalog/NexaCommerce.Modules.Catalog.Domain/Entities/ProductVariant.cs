@@ -2,48 +2,40 @@ namespace NexaCommerce.Modules.Catalog.Domain.Entities;
 
 public sealed class ProductVariant
 {
-    private readonly List<VariantAttributeValue> _attributes = new();
-
-    public IReadOnlyCollection<VariantAttributeValue> Attributes
-        => _attributes;
     public Guid Id { get; private set; }
 
     public Guid ProductId { get; private set; }
 
     public string Sku { get; private set; } = null!;
 
-   
     public decimal Price { get; private set; }
 
-    public decimal? DiscountPrice { get; private set; }
-
-    public int Stock { get; private set; }
+    public decimal? OldPrice { get; private set; }
 
     public bool IsActive { get; private set; }
+
+    public Product Product { get; private set; } = null!;
+
+    private readonly List<ProductVariantOption> _options = new();
+
+    public IReadOnlyCollection<ProductVariantOption> Options
+        => _options;
 
     private ProductVariant()
     {
     }
-    public void AddAttribute(
-    VariantAttributeValue attribute)
-    {
-        _attributes.Add(attribute);
-    }
+
     private ProductVariant(
-        Guid id,
         Guid productId,
         string sku,
-      
         decimal price,
-        decimal? discountPrice,
-        int stock)
+        decimal? oldPrice)
     {
-        Id = id;
+        Id = Guid.NewGuid();
         ProductId = productId;
-        Sku = sku;   
+        Sku = sku;
         Price = price;
-        DiscountPrice = discountPrice;
-        Stock = stock;
+        OldPrice = oldPrice;
         IsActive = true;
     }
 
@@ -51,46 +43,36 @@ public sealed class ProductVariant
         Guid productId,
         string sku,
         decimal price,
-        decimal? discountPrice,
-        int stock)
+        decimal? oldPrice)
     {
         return new ProductVariant(
-            Guid.NewGuid(),
             productId,
             sku,
-            
             price,
-            discountPrice,
-            stock);
+            oldPrice);
     }
 
-    public void UpdatePrice(decimal price)
+    public void ChangePrice(
+        decimal price,
+        decimal? oldPrice)
     {
         Price = price;
+        OldPrice = oldPrice;
     }
 
-    public void UpdateDiscount(decimal? discount)
-    {
-        DiscountPrice = discount;
-    }
-
-    public void IncreaseStock(int quantity)
-    {
-        Stock += quantity;
-    }
-
-    public void DecreaseStock(int quantity)
-    {
-        Stock -= quantity;
-    }
-
-    public void Deactivate()
+    public void Disable()
     {
         IsActive = false;
     }
 
-    public void Activate()
+    public void Enable()
     {
         IsActive = true;
+    }
+
+    public void AddOption(
+        ProductVariantOption option)
+    {
+        _options.Add(option);
     }
 }

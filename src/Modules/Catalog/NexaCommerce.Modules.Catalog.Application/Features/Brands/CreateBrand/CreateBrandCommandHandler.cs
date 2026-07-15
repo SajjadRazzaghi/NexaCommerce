@@ -27,7 +27,7 @@ internal sealed class CreateBrandCommandHandler
         CancellationToken cancellationToken)
     {
         var exists =
-            await _repository.GetBySlugAsync(
+            await _repository.GetByNameAsync(
                 request.Slug,
                 cancellationToken);
 
@@ -42,8 +42,7 @@ internal sealed class CreateBrandCommandHandler
         var brand =
             Brand.Create(
                 request.Title,
-                request.Slug,
-                request.Logo);
+                              request.Logo);
 
         await _repository.AddAsync(
             brand,

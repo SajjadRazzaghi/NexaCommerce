@@ -25,18 +25,14 @@ internal sealed class ProductVariantConfiguration
         builder.Property(x => x.Price)
             .HasColumnType("decimal(18,2)");
 
-        builder.Property(x => x.DiscountPrice)
+        builder.Property(x => x.OldPrice)
             .HasColumnType("decimal(18,2)");
 
-        builder.Property(x => x.Stock);
+        builder.HasOne(x => x.Product)
+            .WithMany(x => x.Variants)
+            .HasForeignKey(x => x.ProductId);
 
-        builder.Property(x => x.IsActive);
-
-        builder.HasOne<Product>()
-     .WithMany(x => x.Variants)
-     .HasForeignKey(x => x.ProductId);
-
-        builder.Navigation(x => x.Attributes)
+        builder.Navigation(x => x.Options)
             .UsePropertyAccessMode(PropertyAccessMode.Field);
     }
 }

@@ -36,7 +36,9 @@ public static class DependencyInjection
         services.AddScoped<
     IProductImageRepository,
     ProductImageRepository>();
-       services.AddScoped<IFileStorage, LocalFileStorage>();
+        services.AddScoped<
+       IProductVariantRepository,
+       ProductVariantRepository>();
         return services;
     }
 }

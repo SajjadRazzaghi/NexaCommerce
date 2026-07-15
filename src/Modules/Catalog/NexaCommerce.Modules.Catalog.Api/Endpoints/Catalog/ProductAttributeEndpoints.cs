@@ -1,5 +1,8 @@
 using MediatR;
 
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
+
 using NexaCommerce.Modules.Catalog.Application.Features.ProductAttributeOptions.CreateProductAttributeOption;
 using NexaCommerce.Modules.Catalog.Application.Features.ProductAttributes.CreateProductAttribute;
 using NexaCommerce.Modules.Catalog.Application.Features.ProductAttributes.GetProductAttributes;
@@ -50,4 +53,6 @@ public static class ProductAttributeEndpoints
             : Results.BadRequest(result.Error);
     });
     }
+
+
 }

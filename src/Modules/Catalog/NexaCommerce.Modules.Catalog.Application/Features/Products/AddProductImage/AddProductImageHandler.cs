@@ -49,11 +49,11 @@ internal sealed class AddProductImageCommandHandler
         }
 
         var image =
-            ProductImage.Create(
-                request.ProductId,
-                request.ImageUrl,
-                request.DisplayOrder,
-                request.IsMain);
+      ProductImage.Create(
+          request.ProductId,
+          request.ImageUrl,
+          request.IsMain,
+          request.DisplayOrder);
 
         product.AddImage(image);
 
