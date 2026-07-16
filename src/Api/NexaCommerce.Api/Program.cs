@@ -7,8 +7,8 @@ using NexaCommerce.Modules.Inventory.Api.Endpoints.Inventory;
 using NexaCommerce.Modules.Inventory.Api.Endpoints.Reservations;
 using NexaCommerce.Modules.Inventory.Api.Endpoints.Transactions;
 using NexaCommerce.Modules.Inventory.Api.Endpoints.Warehouses;
-using NexaCommerce.Modules.Order.Application;
-using NexaCommerce.Modules.Order.Infrastructure;
+using NexaCommerce.Modules.OrderModule.Application;
+using NexaCommerce.Modules.OrderModule.Infrastructure;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -42,7 +42,7 @@ app.MapGetVariantInventoryEndpoint();
 app.MapGetStockEndpoint();
 app.MapGetReservationsEndpoint();
 app.MapGetTransactionsEndpoint();
-
+app.MapCreateOrderEndpoint();
 app.UseSwagger();
 app.UseSwaggerUI();
 

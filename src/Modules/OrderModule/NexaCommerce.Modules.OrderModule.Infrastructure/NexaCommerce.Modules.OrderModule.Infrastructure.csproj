@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+    <ItemGroup>
+
+        <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Infrastructure\NexaCommerce.Infrastructure.csproj" />
+
+        <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
+
+        <ProjectReference Include="..\NexaCommerce.Modules.OrderModule.Application\NexaCommerce.Modules.OrderModule.Application.csproj" />
+
+        <ProjectReference Include="..\NexaCommerce.Modules.OrderModule.Domain\NexaCommerce.Modules.OrderModule.Domain.csproj" />
+
+    </ItemGroup>
+
+    <ItemGroup>
+
+        <PackageReference Include="Microsoft.EntityFrameworkCore" />
+
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" />
+
+    </ItemGroup>
+</Project>
