@@ -36,9 +36,17 @@ internal sealed class OrderRepository
                 cancellationToken);
     }
 
-    public async Task<List<Order>> GetCustomerOrdersAsync(
-        Guid customerId,
+    public async Task<List<Order>> GetAllAsync(
         CancellationToken cancellationToken = default)
+    {
+        return await _context.Orders
+            .Include(x => x.Items)
+            .OrderByDescending(x => x.CreatedOnUtc)
+            .ToListAsync(cancellationToken);
+    }
+    public async Task<List<Order>> GetCustomerOrdersAsync(
+    Guid customerId,
+    CancellationToken cancellationToken = default)
     {
         return await _context.Orders
             .Include(x => x.Items)

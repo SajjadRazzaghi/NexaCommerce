@@ -8,11 +8,14 @@
 
     <ItemGroup>
         <FrameworkReference Include="Microsoft.AspNetCore.App" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi"
+                  />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\NexaCommerce.Modules.OrderModule.Application\NexaCommerce.Modules.OrderModule.Application.csproj" />
       <ProjectReference Include="..\NexaCommerce.Modules.OrderModule.Infrastructure\NexaCommerce.Modules.OrderModule.Infrastructure.csproj" />
+    
     </ItemGroup>
 
 </Project>

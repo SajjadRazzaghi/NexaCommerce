@@ -9,6 +9,8 @@ using NexaCommerce.Modules.Inventory.Api.Endpoints.Transactions;
 using NexaCommerce.Modules.Inventory.Api.Endpoints.Warehouses;
 using NexaCommerce.Modules.OrderModule.Application;
 using NexaCommerce.Modules.OrderModule.Infrastructure;
+using NexaCommerce.Modules.OrderModule.Api.Endpoints.Orders;
+using NexaCommerce.Modules.OrderModule.Api;
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddEndpointsApiExplorer();
@@ -18,10 +20,12 @@ builder.Services.AddIdentityApplication();
 builder.Services.AddIdentityInfrastructure(builder.Configuration);
 builder.Services.Configure<JwtSettings>(
     builder.Configuration.GetSection(JwtSettings.SectionName));
-builder.Services.AddOrderApplication();
 
-builder.Services.AddOrderInfrastructure(
-    builder.Configuration);
+builder.Services.AddOrderModuleApplication();
+
+
+builder.Services.AddOrderModuleInfrastructure(builder.Configuration);
+builder.Services.AddOrderModule(builder.Configuration);
 var app = builder.Build();
 
 app.MapLoginEndpoint();
@@ -43,6 +47,20 @@ app.MapGetStockEndpoint();
 app.MapGetReservationsEndpoint();
 app.MapGetTransactionsEndpoint();
 app.MapCreateOrderEndpoint();
+
+app.MapCreateOrderEndpoint();
+app.MapGetOrderEndpoint();
+app.MapGetOrdersEndpoint();
+
+app.MapPayOrderEndpoint();
+
+app.MapShipOrderEndpoint();
+
+app.MapCompleteOrderEndpoint();
+
+app.MapCancelOrderEndpoint();
+
+
 app.UseSwagger();
 app.UseSwaggerUI();
 

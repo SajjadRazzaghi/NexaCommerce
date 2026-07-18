@@ -5,7 +5,8 @@ using NexaCommerce.Modules.OrderModule.Domain.Entities;
 
 namespace NexaCommerce.Modules.OrderModule.Infrastructure.Persistence.Configurations;
 
-internal sealed class OrderItemConfiguration : IEntityTypeConfiguration<OrderItem>
+internal sealed class OrderItemConfiguration
+    : IEntityTypeConfiguration<OrderItem>
 {
     public void Configure(EntityTypeBuilder<OrderItem> builder)
     {
@@ -18,6 +19,8 @@ internal sealed class OrderItemConfiguration : IEntityTypeConfiguration<OrderIte
             .IsRequired();
 
         builder.Property(x => x.UnitPrice)
-            .HasColumnType("decimal(18,2)");
+            .HasPrecision(18, 2);
+
+        builder.Ignore(x => x.TotalPrice);
     }
 }

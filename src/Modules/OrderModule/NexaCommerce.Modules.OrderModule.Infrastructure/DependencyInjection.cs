@@ -10,7 +10,7 @@ namespace NexaCommerce.Modules.OrderModule.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddOrderInfrastructure(
+    public static IServiceCollection AddOrderModuleInfrastructure(
         this IServiceCollection services,
         IConfiguration configuration)
     {

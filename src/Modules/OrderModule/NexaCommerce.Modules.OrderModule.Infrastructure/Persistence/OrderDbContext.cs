@@ -4,7 +4,8 @@ using NexaCommerce.Modules.OrderModule.Domain.Entities;
 
 namespace NexaCommerce.Modules.OrderModule.Infrastructure.Persistence;
 
-public sealed class OrderDbContext : DbContext
+public sealed class OrderDbContext
+    : DbContext
 {
     public OrderDbContext(
         DbContextOptions<OrderDbContext> options)
@@ -20,5 +21,7 @@ public sealed class OrderDbContext : DbContext
     {
         modelBuilder.ApplyConfigurationsFromAssembly(
             typeof(OrderDbContext).Assembly);
+
+        base.OnModelCreating(modelBuilder);
     }
 }
