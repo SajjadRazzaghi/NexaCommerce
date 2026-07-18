@@ -81,6 +81,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Modules.OrderM
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NexaCommerce.Modules.OrderModule.Infrastructure", "src\Modules\OrderModule\NexaCommerce.Modules.OrderModule.Infrastructure\NexaCommerce.Modules.OrderModule.Infrastructure.csproj", "{4A1D468D-A5D4-4316-AF5C-8CF21E60148C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CartModule", "CartModule", "{05E230FF-5EB1-4943-BEC2-2F85A65F785E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Modules.CartModule.Domain", "src\Modules\CartModule\NexaCommerce.Modules.CartModule.Domain\NexaCommerce.Modules.CartModule.Domain.csproj", "{B724AD6D-0975-46F1-BB4E-5E9777CB7645}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Modules.CartModule.Application", "src\Modules\CartModule\NexaCommerce.Modules.CartModule.Application\NexaCommerce.Modules.CartModule.Application.csproj", "{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Modules.CartModule.Infrastructure", "src\Modules\CartModule\NexaCommerce.Modules.CartModule.Infrastructure\NexaCommerce.Modules.CartModule.Infrastructure.csproj", "{C2F05F33-9DF2-489C-A8B9-10818EAC4439}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NexaCommerce.Modules.CartModule.Api", "src\Modules\CartModule\NexaCommerce.Modules.CartModule.Api\NexaCommerce.Modules.CartModule.Api.csproj", "{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -163,6 +173,22 @@ Global
 		{4A1D468D-A5D4-4316-AF5C-8CF21E60148C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1D468D-A5D4-4316-AF5C-8CF21E60148C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1D468D-A5D4-4316-AF5C-8CF21E60148C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B724AD6D-0975-46F1-BB4E-5E9777CB7645}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B724AD6D-0975-46F1-BB4E-5E9777CB7645}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B724AD6D-0975-46F1-BB4E-5E9777CB7645}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B724AD6D-0975-46F1-BB4E-5E9777CB7645}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C2F05F33-9DF2-489C-A8B9-10818EAC4439}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C2F05F33-9DF2-489C-A8B9-10818EAC4439}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C2F05F33-9DF2-489C-A8B9-10818EAC4439}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C2F05F33-9DF2-489C-A8B9-10818EAC4439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -201,6 +227,11 @@ Global
 		{11023A8D-729F-422C-BE36-3B40C36C8872} = {41C6162F-E0C2-4A4A-8F28-10AF91B6932B}
 		{F293DE94-A2A3-472F-B7B6-AF49E5DCF4BC} = {41C6162F-E0C2-4A4A-8F28-10AF91B6932B}
 		{4A1D468D-A5D4-4316-AF5C-8CF21E60148C} = {41C6162F-E0C2-4A4A-8F28-10AF91B6932B}
+		{05E230FF-5EB1-4943-BEC2-2F85A65F785E} = {8AAE01DC-6BA5-436C-8DDB-9A285CE5C17D}
+		{B724AD6D-0975-46F1-BB4E-5E9777CB7645} = {05E230FF-5EB1-4943-BEC2-2F85A65F785E}
+		{6DDE7D6A-71CC-45AA-85E1-EB335858BBE7} = {05E230FF-5EB1-4943-BEC2-2F85A65F785E}
+		{C2F05F33-9DF2-489C-A8B9-10818EAC4439} = {05E230FF-5EB1-4943-BEC2-2F85A65F785E}
+		{83F7CDF8-D0B4-41B4-A8C3-FC42E9FAA65F} = {05E230FF-5EB1-4943-BEC2-2F85A65F785E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E79E1CDD-F933-4086-88F3-5E55E143DC13}

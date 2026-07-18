@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\NexaCommerce.Modules.CartModule.Application\NexaCommerce.Modules.CartModule.Application.csproj" />
+    <ProjectReference Include="..\NexaCommerce.Modules.CartModule.Domain\NexaCommerce.Modules.CartModule.Domain.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Infrastructure\NexaCommerce.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>
