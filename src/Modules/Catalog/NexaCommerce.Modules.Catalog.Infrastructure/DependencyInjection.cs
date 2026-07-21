@@ -8,6 +8,8 @@ using NexaCommerce.Modules.Catalog.Infrastructure.Persistence.Repositories;
 using NexaCommerce.Infrastructure.Persistence;
 using NexaCommerce.SharedKernel.Abstractions;
 using NexaCommerce.Infrastructure.Storage;
+using NexaCommerce.Modules.Catalog.Application.Services;
+using NexaCommerce.Modules.Catalog.Infrastructure.Services;
 
 namespace NexaCommerce.Modules.Catalog.Infrastructure;
 
@@ -39,6 +41,7 @@ public static class DependencyInjection
         services.AddScoped<
        IProductVariantRepository,
        ProductVariantRepository>();
+        services.AddScoped<ICatalogReadService, CatalogReadService>();
         return services;
     }
 }

@@ -11,10 +11,14 @@
 
       <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Common\NexaCommerce.Common.csproj" />
 
+
+      <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.Contracts\NexaCommerce.Contracts.csproj" />
+
       <ProjectReference Include="..\..\..\BuildingBlocks\NexaCommerce.SharedKernel\NexaCommerce.SharedKernel.csproj" />
 
       <ProjectReference Include="..\NexaCommerce.Modules.Catalog.Domain\NexaCommerce.Modules.Catalog.Domain.csproj" />
-      
+
+     
   </ItemGroup>
     <ItemGroup>
         <PackageReference Include="FluentValidation" />
@@ -24,6 +28,7 @@
 
     </ItemGroup>
     <ItemGroup>
+      <Folder Include="DTOs\" />
       <Folder Include="Features\ProductSpecifications\" />
     </ItemGroup>
 </Project>
