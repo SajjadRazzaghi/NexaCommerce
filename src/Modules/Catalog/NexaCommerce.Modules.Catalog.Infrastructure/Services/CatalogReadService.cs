@@ -1,6 +1,5 @@
 using Microsoft.EntityFrameworkCore;
 
-using NexaCommerce.Modules.Catalog.Application.DTOs;
 using NexaCommerce.Modules.Catalog.Application.Services;
 using NexaCommerce.Modules.Catalog.Infrastructure.Persistence;
 
@@ -29,5 +28,10 @@ internal sealed class CatalogReadService
                 x.Price,
                 x.IsActive))
             .FirstOrDefaultAsync(cancellationToken);
+    }
+
+    Task<ProductSnapshot?> ICatalogReadService.GetProductAsync(Guid productVariantId, CancellationToken cancellationToken)
+    {
+        throw new NotImplementedException();
     }
 }

@@ -21,6 +21,8 @@ public sealed class ProductVariant
     public IReadOnlyCollection<ProductVariantOption> Options
         => _options;
 
+    public object Name { get; set; }
+
     private ProductVariant()
     {
     }
